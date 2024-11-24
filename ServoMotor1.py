@@ -47,6 +47,7 @@ def loop():
         
         servo_value =adc.analogRead(1)  #valore del servo dato lungo le  y
         servo_angle =MapToAngleServo(servo_value)
+        print(f"angolo = {servo_angle}")
         servo.angle = servo_angle   # il servo stra facile da girare
 
         time.sleep(0.1) 
