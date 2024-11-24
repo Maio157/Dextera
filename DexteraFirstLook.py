@@ -12,12 +12,12 @@ CCWStep = (0x01, 0x02, 0x04, 0x08)  # Ordine per rotazione antioraria
 CWStep = (0x08, 0x04, 0x02, 0x01)   # Ordine per rotazione oraria
 
 adc = ADCDevice()  # Oggetto ADC
-myGPIO= 14
+ServoGPIO= 14
 SERVO_DELAY_SEC = 0.001 
 myCorrection=0.0
 maxPW=(2.5+myCorrection)/1000
 minPW=(0.5-myCorrection)/1000
-servo =  AngularServo(myGPIO,initial_angle=0,min_angle=0, max_angle=180,min_pulse_width=minPW,max_pulse_width=maxPW)
+servo =  AngularServo(ServoGPIO,initial_angle=0,min_angle=0, max_angle=180,min_pulse_width=minPW,max_pulse_width=maxPW)
 
 
 
